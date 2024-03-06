@@ -1,0 +1,89 @@
+
+commands in mongo Db
+
+-Show Database : display all db's
+-use db name : redirect to particular db
+-show collections : display  all collections
+-find() : to get all documents from collections
+-findOne({email: , password:}) : particuler data satisfying condition
+-find().limit() - to display data with a limit
+-find().sort({key:1}) - sort ascending , -1 descending
+-insertMany() - insert multible documents at a time
+-insertOne()  - insert single document at a time
+-updateOne() - update single value at a time
+-updateMany()-
+-deleteOne()-
+-deleteMany()-
+-
+
+
+apllying  Queries
+
+age greater $gt/gte  lesser $lt/lte
+
+$gt-greater than
+$gte-greater Than Equel to
+$lt- less than
+$lte -less than or equal
+
+applying queries commands
+
+age greater $gt/gte  lesser $lt/lte
+$and /or
+$eq / ne
+$exists
+
+
+
+to join multible collection
+
+Aggregation operations process multiple documents and return computed results. You can use aggregation operations to:
+
+Group values from multiple documents together.
+
+Perform operations on the grouped data to return a single result.
+
+Analyze data changes over time.
+
+To perform aggregation operations, you can use:
+
+
+
+{
+   $lookup:
+     {
+       from: <collection to join>,
+       localField: <field from the input documents>,
+       foreignField: <field from the documents of the "from" collection>,
+       as: <output array field>
+     }
+}
+
+
+
+Mongoose
+-----------------
+
+Mongoose. module is one of the most powerful external module of the node.js. Mongoose is a mongoDB ODM 
+(OBJECT DATABASE MODELLING) that is used to translate the  code and its representation from mongoDB to the Node.js server
+
+
+Advantages of MongoDB module
+
+Collection Validation of the MongoDB DATABASE CAN BE DONE EASILY.
+Predefined Structure cen be implemented on the collection.
+Constraints can be applied to dicuments of collections using Mongoose.
+
+
+.install Mongoose : npm install Mongoose
+-create folder for defining details
+-create a connection file get connection string from process.env
+-import connection to index.js
+
+
+schema
+--------
+Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines  the shape of the
+documents within that collection.
+
+it can also implement validations.
